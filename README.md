@@ -69,41 +69,45 @@ The Block Storage plug-in is a persistent, high-performance iSCSI storage that y
 
 ## Step 3 deploy Nginx
   
-We will deploy  Apache on our cluster 
+We will deploy  Nginx on our cluster 
   
 * Click the **Catalog** button on the top 
 * Select **Software** from the catalog
 * Search for **Nginx Opensource** and click on it
-![Apache](/apache-select.png)
+![Nginx](/search.png)
 
 
 * On the application page Click in the _dot_ next to the cluster, you wish to use
-![Cluster](/cluster-select.png)
+![Cluster](/cluster.png)
 * Click on  **Enter or Select Namespace** and choose the default Namespace or use a custom one 
-![Namespace](/namespace.png)
+![Namespace](/details-namespace.png)
 * Give a unique **name** to workspace, which you can easily recognize
-![Name](/name.png)
-* Give **tags** to your apache workspace, for more information visit [tags]
+![Name](/details-name.png)
+* Select which resource group you want to use, it's for access controll and billing purposes. For more information please visit [resource groups]
 
-![apache-tags](/apache-tags.png)
+![dr-resource](/details-resource.png)
+
+* Give **tags** to your nginx workspace, for more information visit [tags]
+
+![nginx-tags](/details-tags.png)
 
 * Click on **Parameters with default values**, You can set deployment values or use the default ones
 
-![def-val](/deploy-values.png)
+![def-val](/parameters.png)
 
 * After finishing everything, **tick** the box next to the agreements and click **install**
 
 ![Install](/install.png)
 
-* The apache workspace will start installing, wait a couple of minutes 
+* The nginx workspace will start installing, wait a couple of minutes 
 
-![apache-install](/in-progress.jpg)
+![nginx-install](/in-progress.png)
 
-* You apache workspace has been successfully deployed
+* You nginx workspace has been successfully deployed
 
-![apache-finsihed](/apache-finished.jpg)
+![nginx-finsihed](/done.png)
 
-## Verify Apache installation
+## Verify Nginx installation
 
 * Go to [Resources] in your browser 
 * Click on **Clusters**
@@ -127,29 +131,29 @@ We will deploy  Apache on our cluster
  ```sh
 $ kubectl get ns
 ```
-![get-ns](/get-ns.jpg)
+![get-ns](/get-ns.png)
 
 
  ```sh
 $ kubectl get pod -n NAMESPACE -o wide 
 ```
-![get-pod](/get-pod.jpg)
+![get-pod](/get-pod.png)
 
 
  ```sh
 $ kubectl get service -n NAMESPACE
 ```
-![get-service](/get-service.jpg)
+![get-service](/get-service.png)
 
 
-* Running Apache service will be visible 
+* Running Ngninx service will be visible 
 * Copy the **External ip**, you can access the website on this IP
 * Paste it into your browser
-* Apache welcome message will be visible
+* Nginx welcome message will be visible
 
-![works](/apache-works.png)
+![works](/nginx-welcome.png)
 
-You successfully deployed an Apache webserver on IBM Cloud! 
+You successfully deployed an Nginx webserver on IBM Cloud! 
 
 
 

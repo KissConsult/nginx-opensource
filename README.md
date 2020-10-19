@@ -74,11 +74,13 @@ We will deploy  Nginx on our cluster
 * Click the **Catalog** button on the top 
 * Select **Software** from the catalog
 * Search for **Nginx Opensource** and click on it
-![Nginx](/search.png)
+![Nginx](/nginx-search.png)
 
+* Please select IBM Kubernetes Service
+![target](/select-target.png)
 
 * On the application page Click in the _dot_ next to the cluster, you wish to use
-![Cluster](/cluster.png)
+![Cluster](/select-cluster.png)
 * Click on  **Enter or Select Namespace** and choose the default Namespace or use a custom one 
 ![Namespace](/details-namespace.png)
 * Give a unique **name** to workspace, which you can easily recognize
